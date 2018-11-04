@@ -142,7 +142,6 @@ def string_processor(string):
     Splits string by integers and returns arrays with only letters inside
     """
     arr = ' '.join(re.findall(r'[0-9|a-zA-Z]+', string.replace(r'\n', ' '))).strip()
-    all_ints = re.findall(r'[0-9]+', arr)
     arr = re.compile(r'[0-9]+').split(arr)
     arr = [re.findall(r'[a-zA-Z]+', a) for a in arr if len(a) > 0]
 
